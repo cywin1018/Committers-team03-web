@@ -37,6 +37,7 @@ const SearchBar: React.FC<SearchBarProps> = ({placeholder, title}) => {
           isRegistered: data.data.isRegistered,
         }));
       } else {
+        // add console
         const response = await axios.get('api/v1/buddy/search');
         const data = response.data;
         console.log(data);
